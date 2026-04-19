@@ -697,30 +697,95 @@
     transform: translateY(0);
   }
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   /* RESPONSIVE */
-  @media (max-width: 900px) {
-  nav { padding: 16px 24px; }
-  .nav-links { display: none; }
-  section { padding: 60px 20px; }
-  #hero { padding: 100px 20px 60px; }
-  .about-grid { 
-      grid-template-columns: 1fr; 
-      gap: 32px; 
-    }
-  .about-visual { 
-    max-width: 100%; 
-    width: 100%;
+  @media (max-width: 768px) {
+  nav { 
+    padding: 12px 16px; 
+    flex-wrap: wrap;
+    gap: 8px;
   }
+  .nav-links { display: none; }
+  .nav-logo { font-size: 22px; }
+  
+  section { padding: 50px 16px; }
+  #hero { padding: 90px 16px 50px; }
+  
+  .hero-title { 
+    font-size: clamp(52px, 16vw, 120px); 
+    line-height: 0.9;
+  }
+  .hero-slogan {
+    font-size: clamp(11px, 3vw, 14px);
+    letter-spacing: 2px;
+  }
+  .hero-sub { font-size: 14px; margin-top: 20px; }
+  .hero-cta { flex-direction: column; gap: 12px; }
+  .btn-primary, .btn-secondary { 
+    width: 100%; 
+    text-align: center;
+    padding: 14px 20px;
+  }
+  .hero-stats { 
+    gap: 16px; 
+    flex-wrap: wrap;
+    padding-top: 32px;
+    margin-top: 40px;
+  }
+  .stat-number { font-size: 36px; }
+
+  .about-grid { 
+    grid-template-columns: 1fr; 
+    gap: 28px; 
+  }
+  .about-visual { max-width: 100%; width: 100%; }
+  .about-robot-frame { max-height: 280px; }
+
   .features-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-stats { gap: 24px; flex-wrap: wrap; }
+  .feature-card { padding: 32px 24px; }
+
+  .step { 
+    grid-template-columns: 40px 1fr; 
+    gap: 16px; 
+    padding: 28px 0;
+  }
+  .step-num { font-size: 40px; }
+
+  .finished-quote { 
+    font-size: clamp(16px, 4.5vw, 24px); 
+    margin-bottom: 28px;
+    padding: 0 8px;
+  }
   .finished-visual { max-width: 100%; }
-  .finished-quote { font-size: clamp(18px, 5vw, 28px); margin-bottom: 36px; }
-  footer { flex-direction: column; gap: 16px; text-align: center; }
-    .step { grid-template-columns: 50px 1fr; gap: 20px; }
-    .hero-title { font-size: clamp(60px, 18vw, 200px); }
+
+  .team-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 16px;
+  }
+  .team-card { padding: 24px 16px; }
+  .team-avatar { width: 80px; height: 80px; }
+
+  footer { 
+    flex-direction: column; 
+    gap: 16px; 
+    text-align: center;
+    padding: 32px 16px;
   }
 
+  .lang-toggle { padding: 4px 6px; }
+  .lang-btn { padding: 4px 10px; font-size: 10px; }
+
+  .section-title { font-size: clamp(32px, 9vw, 56px); }
+}
   /* PARTICLES */
   #particles {
     position: absolute;
