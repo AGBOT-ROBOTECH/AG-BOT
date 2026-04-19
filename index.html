@@ -697,95 +697,103 @@
     transform: translateY(0);
   }
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   /* RESPONSIVE */
   @media (max-width: 768px) {
-  nav { 
-    padding: 12px 16px; 
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .nav-links { display: none; }
-  .nav-logo { font-size: 22px; }
-  
-  section { padding: 50px 16px; }
-  #hero { padding: 90px 16px 50px; }
-  
-  .hero-title { 
-    font-size: clamp(52px, 16vw, 120px); 
-    line-height: 0.9;
-  }
-  .hero-slogan {
-    font-size: clamp(11px, 3vw, 14px);
-    letter-spacing: 2px;
-  }
-  .hero-sub { font-size: 14px; margin-top: 20px; }
-  .hero-cta { flex-direction: column; gap: 12px; }
-  .btn-primary, .btn-secondary { 
-    width: 100%; 
-    text-align: center;
-    padding: 14px 20px;
-  }
-  .hero-stats { 
-    gap: 16px; 
-    flex-wrap: wrap;
-    padding-top: 32px;
-    margin-top: 40px;
-  }
-  .stat-number { font-size: 36px; }
+    nav {
+      padding: 10px 16px;
+      flex-wrap: nowrap;
+      gap: 8px;
+      justify-content: space-between;
+    }
+    .nav-links { display: none; }
+    .nav-logo { font-size: 20px; letter-spacing: 2px; }
+    .lang-toggle { padding: 4px 6px; flex-shrink: 0; }
+    .lang-btn { padding: 4px 10px; font-size: 10px; }
 
-  .about-grid { 
-    grid-template-columns: 1fr; 
-    gap: 28px; 
+    section { padding: 50px 16px; }
+    #hero { padding: 80px 16px 50px; min-height: 100svh; }
+
+    .hero-title {
+      font-size: clamp(52px, 15vw, 90px);
+      line-height: 0.9;
+      letter-spacing: -1px;
+    }
+    .hero-slogan {
+      font-size: clamp(9px, 2.5vw, 12px);
+      letter-spacing: 1px;
+      margin-top: 8px;
+    }
+    .hero-sub { font-size: 13px; margin-top: 14px; max-width: 100%; }
+    .hero-cta {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 24px;
+      align-items: stretch;
+    }
+    .btn-primary, .btn-secondary {
+      width: 100%;
+      text-align: center;
+      padding: 13px 16px;
+      font-size: 11px;
+    }
+    .hero-stats {
+      gap: 14px;
+      flex-wrap: wrap;
+      padding-top: 20px;
+      margin-top: 24px;
+    }
+    .stat-number { font-size: 30px; }
+    .stat-label { font-size: 9px; }
+    .stat-item { min-width: 60px; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 24px; }
+    .about-visual { max-width: 100%; width: 100%; aspect-ratio: 4/3; }
+    .about-robot-frame { height: 100%; }
+    .about-text p { font-size: 13px; }
+
+    .features-grid { grid-template-columns: 1fr; }
+    .feature-card { padding: 28px 20px; }
+
+    .step { grid-template-columns: 40px 1fr; gap: 14px; padding: 22px 0; }
+    .step-num { font-size: 36px; }
+    .step-title { font-size: 17px; }
+    .step-desc { font-size: 13px; }
+
+    #finished { padding: 50px 16px; }
+    .finished-quote {
+      font-size: clamp(14px, 4vw, 20px);
+      margin-bottom: 24px;
+      padding: 0 4px;
+      letter-spacing: 1px;
+    }
+    .finished-visual { max-width: 100%; }
+
+    .team-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .team-card { padding: 18px 10px; }
+    .team-avatar { width: 70px; height: 70px; }
+    .team-name { font-size: 13px; }
+    .team-role { font-size: 9px; }
+
+    footer {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+      padding: 28px 16px;
+    }
+    footer > div { justify-content: center; }
+
+    .section-title { font-size: clamp(28px, 8vw, 48px); }
+    .section-tag { font-size: 10px; letter-spacing: 2px; }
   }
-  .about-visual { max-width: 100%; width: 100%; }
-  .about-robot-frame { max-height: 280px; }
 
-  .features-grid { grid-template-columns: 1fr; }
-  .feature-card { padding: 32px 24px; }
-
-  .step { 
-    grid-template-columns: 40px 1fr; 
-    gap: 16px; 
-    padding: 28px 0;
-  }
-  .step-num { font-size: 40px; }
-
-  .finished-quote { 
-    font-size: clamp(16px, 4.5vw, 24px); 
-    margin-bottom: 28px;
-    padding: 0 8px;
-  }
-  .finished-visual { max-width: 100%; }
-
-  .team-grid { 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 16px;
-  }
-  .team-card { padding: 24px 16px; }
-  .team-avatar { width: 80px; height: 80px; }
-
-  footer { 
-    flex-direction: column; 
-    gap: 16px; 
-    text-align: center;
-    padding: 32px 16px;
+  @media (max-width: 380px) {
+    .hero-title { font-size: 44px; }
+    .team-grid { grid-template-columns: 1fr; }
+    .stat-number { font-size: 26px; }
+    .finished-quote { font-size: 13px; }
+    .btn-primary, .btn-secondary { font-size: 10px; padding: 12px 12px; }
   }
 
-  .lang-toggle { padding: 4px 6px; }
-  .lang-btn { padding: 4px 10px; font-size: 10px; }
-
-  .section-title { font-size: clamp(32px, 9vw, 56px); }
-}
   /* PARTICLES */
   #particles {
     position: absolute;
@@ -830,14 +838,7 @@
   }
 
 
-  .hero-cta {
-    display: flex;
-    gap: 15px; /* Slightly reduced gap from 20px to 15px to fit 3 buttons better */
-    margin-top: 48px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.8s forwards;
-    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
-  }
+
 
 
 
@@ -917,7 +918,7 @@
         <div class="corner-dot br"></div>
 
         <!-- Robot SVG illustration -->
-        <img src="Assets/Bot-project.jpg" alt="AG-Bot 3D Model" class="robot-svg">
+        <img src="/home/joel/Desktop/Photos/Bot-project.jpg" alt="AG-Bot 3D Model" class="robot-svg">
       </div>
     </div>
 
@@ -1080,7 +1081,7 @@
       <div class="corner-dot tr"></div>
       <div class="corner-dot bl"></div>
       <div class="corner-dot br"></div>
-      <img src="Assets/Finished.jpg" alt="AG-Bot Finished" style="width: 70%; opacity: 0.9;">
+      <img src="/home/joel/Desktop/Photos/Finished.jpg" alt="AG-Bot Finished" style="width: 70%; opacity: 0.9;">
     </div>
   </div>
 </section>
@@ -1093,7 +1094,7 @@
   <div class="team-grid">
     <div class="team-card reveal">
       <div class="team-avatar">
-      <img src="Assets/Olta.jpg">
+      <img src="/home/joel/Desktop/Photos/Olta.jpg">
       </div>
       <div class="team-name" data-i18n="t1_name">Olta Muharem</div>
       <div class="team-role" data-i18n="t1_role">Team Leader & Design</div>
@@ -1101,7 +1102,7 @@
 
     <div class="team-card reveal">
       <div class="team-avatar">
-      <img src="Assets/Rezart.jpg">
+      <img src="/home/joel/Desktop/Photos/Rezart.jpg">
     </div>
       <div class="team-name" data-i18n="t2_name">Rezart Xhuti</div>
       <div class="team-role" data-i18n="t2_role">Lead Mechanic</div>
@@ -1109,7 +1110,7 @@
 
     <div class="team-card reveal">
       <div class="team-avatar">
-      <img src="Assets/Rubin.jpg">
+      <img src="/home/joel/Desktop/Photos/Rubin.jpg">
     </div>
       <div class="team-name" data-i18n="t3_name">Rubin Shabanllari</div>
       <div class="team-role" data-i18n="t3_role">Software & Sensors</div>
@@ -1117,7 +1118,7 @@
 
     <div class="team-card reveal">
       <div class="team-avatar">
-      <img src="Assets/Joel.jpg">
+      <img src="/home/joel/Desktop/Photos/Joel.jpg">
     </div>
       <div class="team-name" data-i18n="t4_name">Joel Çeku</div>
       <div class="team-role" data-i18n="t4_role">Programming & Web</div>
@@ -1125,7 +1126,7 @@
 
       <div class="team-card reveal">
       <div class="team-avatar">
-      <img src="Assets/Elizabet.jpg">
+      <img src="/home/joel/Desktop/Photos/Elizabet.jpg">
     </div>
       <div class="team-name" data-i18n="t5_name">Elizabet Sheremeni</div>
       <div class="team-role" data-i18n="t5_role">Design Maker</div>
@@ -1133,7 +1134,7 @@
 
       <div class="team-card reveal">
       <div class="team-avatar">
-      <img src="Assets/Ergi.jpg">
+      <img src="/home/joel/Desktop/Photos/Ergi.jpg">
     </div>
       <div class="team-name" data-i18n="t6_name">Ergi Rexhollari</div>
       <div class="team-role" data-i18n="t6_role">Programming & Research</div>
@@ -1141,7 +1142,7 @@
 
     <div class="team-card reveal">
       <div class="team-avatar">
-      <img src="Assets/Ali.jpg">
+      <img src="/home/joel/Desktop/Photos/Ali.jpg">
     </div>
       <div class="team-name" data-i18n="t7_name">Ali Malësija</div>
       <div class="team-role" data-i18n="t7_role">Simple Mechanics & Testing</div>
@@ -1149,7 +1150,7 @@
 
     <div class="team-card reveal">
       <div class="team-avatar">
-      <img src="Assets/Adrian.jpg">
+      <img src="/home/joel/Desktop/Photos/Adrian.jpg">
     </div>
       <div class="team-name" data-i18n="t8_name">Adrian Agollari</div>
       <div class="team-role" data-i18n="t8_role">Design Builder</div>
@@ -1172,6 +1173,8 @@
     </a>
   </div>
 </footer>
+
+
 
 
 
@@ -1344,6 +1347,7 @@
     document.getElementById('btn-al').classList.toggle('active', lang === 'al');
     document.documentElement.lang = lang === 'al' ? 'sq' : 'en';
   }
+
 
 </script>
 </body>
