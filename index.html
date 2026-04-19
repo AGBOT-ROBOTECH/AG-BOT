@@ -810,7 +810,6 @@
     <div class="hero-cta">
       <a href="#features" class="btn-primary" data-i18n="hero_cta1">Explore Features</a>
       <a href="#how" class="btn-secondary" data-i18n="hero_cta2">How It Works</a>
-      <a href="Assets/Documentation_Eng.pdf" class="btn-secondary" data-i18n="hero_cta3" id="doc-link" target="_blank">View Documentation</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
@@ -1146,7 +1145,6 @@
       hero_sub: 'The autonomous agricultural robot that plants, analyzes, and optimizes your soil — powered by smart sensors and precision mechanics.',
       hero_cta1: 'Explore Features',
       hero_cta2: 'How It Works',
-      hero_cta3: 'View Documentation',
       stat1: 'Sensors',
       stat2: 'Soil Coverage',
       stat3: 'Autonomous',
@@ -1211,7 +1209,6 @@
       hero_sub: 'Roboti bujqësor autonom që mbjell, analizon dhe optimizon tokën tuaj — i mundësuar nga sensorë inteligjentë dhe mekanikë me precizion.',
       hero_cta1: 'Shiko Funksionet',
       hero_cta2: 'Si Funksionon',
-      hero_cta3: 'Shiko Dokumentimin',
       stat1: 'Sensorë',
       stat2: 'Mbulim i Tokës',
       stat3: 'Autonom',
@@ -1282,21 +1279,6 @@
     document.getElementById('btn-al').classList.toggle('active', lang === 'al');
     document.documentElement.lang = lang === 'al' ? 'sq' : 'en';
   }
-
-
-// 1. THIS SWAPS THE LINK
-    const docBtn = document.getElementById('doc-link');
-    if (docBtn) {
-      if (lang === 'al') {
-        docBtn.href = 'Assets/Dokumentimi_Alb.pdf'; // Path to your Albanian PDF
-      } else {
-        docBtn.href = 'Assets/Documentation_Eng.pdf'; // Path to your English PDF
-      }
-    }
-
-
-
-
 
 </script>
 </body>
